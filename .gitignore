@@ -2,6 +2,8 @@
 
 # dependencies
 /node_modules
+# tambem nos workspaces (packages/*)
+node_modules/
 /.pnp
 .pnp.*
 .yarn/*
