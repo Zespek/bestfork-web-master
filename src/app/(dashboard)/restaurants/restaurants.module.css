@@ -1,0 +1,436 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  color: var(--color-black);
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-600);
+  margin-top: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.buttonPrimary {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  padding: 0 var(--spacing-lg);
+  height: 44px;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.buttonPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(174, 154, 99, 0.3);
+}
+
+.buttonSecondary {
+  background-color: var(--color-gray-100);
+  color: var(--color-black);
+  padding: 0 var(--spacing-lg);
+  height: 44px;
+  border-radius: var(--border-radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.buttonSecondary:hover {
+  background-color: var(--color-gray-200);
+}
+
+/* Grid for Restaurants */
+.restaurantGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.restaurantCard {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-lg);
+  transition: all 0.2s;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+}
+
+.restaurantCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-gold);
+}
+
+.restaurantHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: var(--spacing-md);
+}
+
+.restaurantLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background-color: var(--color-gray-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--color-gray-400);
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.restaurantInfo h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-black);
+  margin-bottom: 4px;
+}
+
+.restaurantInfo p {
+  font-size: 13px;
+  color: var(--color-gray-500);
+}
+
+.restaurantStats {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--spacing-sm);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-black);
+}
+
+.statLabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Status Badge */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.statusActive {
+  background-color: rgba(34, 197, 94, 0.1);
+  color: var(--color-success);
+}
+
+.statusInactive {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-error);
+}
+
+/* Details Page Specifics */
+.detailsCard {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.detailsHeader {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-start;
+  margin-bottom: var(--spacing-xl);
+}
+
+.detailsLogo {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  object-fit: cover;
+}
+
+/* Dashboard KPIs Grid */
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.kpiCard {
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-lg);
+}
+
+.kpiValue {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-gold);
+  margin: 8px 0;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: var(--spacing-xl);
+}
+
+.tab {
+  padding: var(--spacing-sm) 0;
+  font-weight: 600;
+  color: var(--color-gray-500);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  color: var(--color-black);
+}
+
+.tabActive {
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: var(--spacing-md);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-gray-500);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--color-gray-50);
+}
+
+.table td {
+  padding: var(--spacing-md);
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Empty state */
+.emptyState {
+  text-align: center;
+  padding: var(--spacing-2xl) 0;
+  color: var(--color-gray-500);
+}
+
+/* Modal and Forms (Colaboradores / Espaços de Eventos) */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: var(--color-white);
+  width: 480px;
+  max-width: 90vw;
+  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-xl);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.modalTitle {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+}
+
+.closeButton {
+  color: var(--color-gray-400);
+}
+
+.closeButton:hover {
+  color: var(--color-error);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-md);
+}
+
+.formLabel {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-gray-700);
+}
+
+.formInput, .formSelect {
+  width: 100%;
+  height: 44px;
+  background-color: var(--color-gray-50);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.formInput:focus, .formSelect:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(174, 154, 99, 0.1);
+}
+
+.errorText {
+  color: var(--color-error);
+  font-size: 12px;
+  margin-top: 6px;
+  font-weight: 500;
+}
+
+.formError {
+  background-color: #fdecec;
+  border: 1.5px solid var(--color-error);
+  color: var(--color-error);
+  border-radius: 14px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+}
+
+.successPanel {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.devLinkBox {
+  background-color: var(--color-gray-50);
+  border-radius: 14px;
+  padding: var(--spacing-md);
+  font-size: 13px;
+  word-break: break-all;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-gray-300);
+  transition: .4s;
+  border-radius: 22px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--color-success);
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* Espaços de Eventos — cards */
+.spaceCard {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.spaceCard + .spaceCard {
+  margin-top: var(--spacing-md);
+}
